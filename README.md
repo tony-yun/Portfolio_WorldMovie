@@ -4,7 +4,7 @@
 
 <div align="center">
   <br />
-  <blockquote><b>The Movie Information App that provide users to add movie to their list.</b>프로젝트에 직접적인 영향을 주는 중요한 코드는 삭제했습니다.</b></blockquote>
+  <blockquote><b>The Movie Information App that provide users to add movie to their list.</b></b>프로젝트에 직접적인 영향을 주는 중요한 코드는 삭제했습니다.</b></blockquote>
   <pre align="center">App Store: <a href="https://apps.apple.com/kr/app/%EC%9B%94%EB%93%9C%EB%AC%B4%EB%B9%84/id6473882514">월드무비</a><br/></pre>
 </div>
 
