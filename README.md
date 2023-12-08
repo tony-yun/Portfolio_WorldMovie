@@ -4,17 +4,17 @@
 
 <div align="center">
   <br />
-  <blockquote><b>The Information App that provide users detected water level.</b></blockquote>
+  <blockquote><b>The Movie Information App that provide users to add movie to their list.</b></blockquote>
   <pre align="center">App Store: <a href="https://apps.apple.com/kr/app/%EC%9B%94%EB%93%9C%EB%AC%B4%EB%B9%84/id6473882514">월드무비</a><br/></pre>
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="1.PNG" width="25%" height="50%">
-  <img src="2.PNG" width="25%" height="50%">
-  <img src="3.PNG" width="25%" height="50%">
-  <img src="4.PNG" width="25%" height="50%">
+  <img src="1.PNG" width="30%" height="50%">
+  <img src="2.PNG" width="30%" height="50%">
+  <img src="3.PNG" width="30%" height="50%">
+  <img src="4.PNG" width="30%" height="50%">
   <br />
 </div>
 
