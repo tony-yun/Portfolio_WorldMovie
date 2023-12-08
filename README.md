@@ -1,6 +1,90 @@
 # Portfolio_WorldMovie
-reference code check of AppStore App WorldMovie
-![FCBD2DE0-105F-47CB-ABD8-B2FEE8E2031F_1_105_c](https://github.com/tony-yun/Portfolio_WorldMovie/assets/96409645/dc5f4220-4b0a-446c-a924-bbeb054c20a8)
-![777AF448-6C31-4F0E-8880-510CCDEF0780_1_105_c](https://github.com/tony-yun/Portfolio_WorldMovie/assets/96409645/99332255-0229-4c42-b4d9-6f0d00e9ab94)
-![68B66919-F13D-45E2-A775-F8E6A6DDD57B_1_105_c](https://github.com/tony-yun/Portfolio_WorldMovie/assets/96409645/d71c7206-eee8-40d3-8317-571beb5a422d)
-![633BD644-83DF-4B5D-9C22-6D06B181B77F_1_105_c](https://github.com/tony-yun/Portfolio_WorldMovie/assets/96409645/c89f046b-c5d8-4318-95fc-42fb13d77064)
+<h1 align="center">[React Native]wateraiInfo<br/></h1>
+<h2 align="center">(iOS & Android)</h2>
+
+<div align="center">
+  <br />
+  <blockquote><b>The Information App that provide users detected water level.</b></blockquote>
+  <pre align="center">App Store: <a href="https://apps.apple.com/kr/app/wateraiinfo/id6444245568">wateraiInfo</a><br/>Google Play Store: <a href="https://play.google.com/store/apps/details?id=com.wateraiinfo">wateraiInfo</a></pre>
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="READMEimg/appstore.png" width="30%" height="50%">
+  <img src="READMEimg/homescreen.png" width="30%" height="50%">
+  <img src="READMEimg/detailscreen.png" width="30%" height="50%">
+  <br />
+</div>
+
+<br/>
+
+### Features
+
+* Sign Up, Sign in, Withdrawal, Or view contents in guest mode, jwt token, userAuth.
+* Navigation, SplashScreen, AsyncStorage, Axios, Module-resolver, Props, Flatlist, etc.
+* User can view the different contents according to usertype.
+* User can bookmark their contents to see them in bookmark screen.
+
+### Example
+
+```tsx
+//App.js
+
+const App = () => {
+  switch (action.type) {
+      case 'RETRIEVE_TOKEN':
+        return {
+          ...prevState,
+          userToken: action.userToken,
+        };
+      case 'REGISTER':
+        return {
+          ...prevState,
+
+ /* ... */
+  const [loginState, dispatch] = React.useReducer(
+    loginReducer,
+    initialLoginState,
+  );
+
+  const authContext = React.useMemo(
+    () => ({
+      
+      signIn: async (props) => {
+        axios
+          .post(`${BASE_URL}/api`, {
+            props
+          })
+          .then(res => {
+            console.log(res);
+            if (res?.data?.ok === true) {
+
+ /* ... */
+return (
+    <AuthContext.Provider value={authContext}>
+      <NavigationContainer>
+        <NativeStack.Navigator screenOptions={{headerShown: false}}>
+          {loginState.userToken === null ? (
+            <NativeStack.Screen name="Stack" component={Stack} />
+          ) : (
+            <>
+              <NativeStack.Screen name="Tab" component={Tab} />
+              <NativeStack.Screen name="DetailStack" component={DetailStack} />
+            </>
+          )}
+        </NativeStack.Navigator>
+      </NavigationContainer>
+    </AuthContext.Provider>
+  );
+}
+```
+
+### Development Progress
+
+* Started from App UI/UX design, App login logic configuration, Coding, http protocol communication to nodejs api configuration all by myself.
+* Published successfully on Google Play Store when the user Auth is completed.
+* Rejected by Apple about 10 times, they needed more function to publish on AppStore.
+* Following Apple's construction, added guest mode login, added user bookmark logic (DB N:M logic).
+* At last, finished the internal testing with using TestFlight and Google Play Console.
+* Finally, published successfully on App Store.
