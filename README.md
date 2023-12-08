@@ -22,70 +22,8 @@
 
 ### Features
 
-* Sign Up, Sign in, Withdrawal, Or view contents in guest mode, jwt token, userAuth.
-* Navigation, SplashScreen, AsyncStorage, Axios, Module-resolver, Props, Flatlist, etc.
-* User can view the different contents according to usertype.
-* User can bookmark their contents to see them in bookmark screen.
-
-### Example
-
-```tsx
-//App.js
-
-const App = () => {
-  switch (action.type) {
-      case 'RETRIEVE_TOKEN':
-        return {
-          ...prevState,
-          userToken: action.userToken,
-        };
-      case 'REGISTER':
-        return {
-          ...prevState,
-
- /* ... */
-  const [loginState, dispatch] = React.useReducer(
-    loginReducer,
-    initialLoginState,
-  );
-
-  const authContext = React.useMemo(
-    () => ({
-      
-      signIn: async (props) => {
-        axios
-          .post(`${BASE_URL}/api`, {
-            props
-          })
-          .then(res => {
-            console.log(res);
-            if (res?.data?.ok === true) {
-
- /* ... */
-return (
-    <AuthContext.Provider value={authContext}>
-      <NavigationContainer>
-        <NativeStack.Navigator screenOptions={{headerShown: false}}>
-          {loginState.userToken === null ? (
-            <NativeStack.Screen name="Stack" component={Stack} />
-          ) : (
-            <>
-              <NativeStack.Screen name="Tab" component={Tab} />
-              <NativeStack.Screen name="DetailStack" component={DetailStack} />
-            </>
-          )}
-        </NativeStack.Navigator>
-      </NavigationContainer>
-    </AuthContext.Provider>
-  );
-}
-```
-
-### Development Progress
-
-* Started from App UI/UX design, App login logic configuration, Coding, http protocol communication to nodejs api configuration all by myself.
-* Published successfully on Google Play Store when the user Auth is completed.
-* Rejected by Apple about 10 times, they needed more function to publish on AppStore.
-* Following Apple's construction, added guest mode login, added user bookmark logic (DB N:M logic).
-* At last, finished the internal testing with using TestFlight and Google Play Console.
-* Finally, published successfully on App Store.
+● AuthContext를 활용한 사용자 경험 관리와 로그인 프로세스 구현, 에러 처리, 그리고 비밀번호 변경 및 회원
+탈퇴와 같은 보안 기능을 개발하고, Firebase를 사용하여 사용자 데이터 관리.
+● Promise와 async-await를 사용한 안정적인 API 통신 및 비동기 작업의 예외 처리에 능숙하며, Zustand를
+활용하여 애플리케이션의 성능과 유지보수성을 극대화.
+● TypeScript를 사용한 정확한 타입 정의로 안정적이고 유지보수가 용이한 코드베이스 구축.
