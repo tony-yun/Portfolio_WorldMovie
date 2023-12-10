@@ -6,6 +6,7 @@ import "react-native-devsettings/withAsyncStorage";
 import { PortalProvider } from "@gorhom/portal";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import AuthProvider from "@/AuthContext";
+import CodePush from "react-native-code-push";
 
 const App: React.FC = (): JSX.Element => {
   return (
@@ -21,4 +22,4 @@ const App: React.FC = (): JSX.Element => {
   );
 };
 
-export default App;
+export default CodePush(App);
